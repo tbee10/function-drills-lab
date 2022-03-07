@@ -12,16 +12,19 @@
 */
 
 //CODE HERE
-
-
+function helloWorld(){
+  console.log('Hello, World!')
+}
+helloWorld()
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
+  
 
 //CODE HERE
-
+const jsNinja = () => 'I am a JavaScript ninja!'
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -31,7 +34,10 @@
 */
 
 //CODE HERE
-
+function printName(name){
+  console.log(name)
+}
+printName('Travis')
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -45,7 +51,11 @@
 */
 
 //CODE HERE
-
+function greeting(name) {
+name = String(name)
+console.log(`Hello, ${name}`)
+}
+greeting('Travis')
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -59,7 +69,13 @@
 */
 
 //CODE HERE
-
+const compareNums = (num1, num2) => {
+  if (num1 > num2){
+    return num1
+  } else{
+    return num2
+  }
+}
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -70,7 +86,11 @@
 */
 
 //CODE HERE
-
+function add(num1 , num2){
+  const answer = num1 + num2
+  return answer
+}
+let sum = add(5, 6)
 
 ////////////////// PROBLEM 7 ////////////////////
 
@@ -79,13 +99,13 @@
   Uncomment the answer underneath.
 */
 
-const exclaim = function(str) {
+function exclaim(str) {
   return str.toUpperCase() + '!!!'
 }
 
 // arrow
 // declaration
-// expression
+expression
 
 
 
@@ -100,7 +120,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// arrow
+arrow
 // declaration
 // expression
 
@@ -109,7 +129,7 @@ const exclaimTwo = str => {
   Call your new function exclaimThree
 
   Brownie points if you use a template string
-*/
+*/const exclaimThree = str => `${str.toUpperCase()}!!!`
 
 
 
@@ -125,7 +145,7 @@ function exclaimFour(str) {
 }
 
 // arrow
-// declaration
+declaration
 // expression
 
 
@@ -139,6 +159,16 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function nameCheck(name){
+  if (name = 'Steven'){
+  console.log('What is up Steven?')
+  } else if(name = 'Bryan'){
+    console.log('Hey Bryan!')
+  } else{
+    console.log('Cool name' + $[NAMEPARAM])
+  }
+}
+let nameGreeting = nameCheck()
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -152,7 +182,18 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
-
+function faveColorFinder(color){
+  if (color = "red"){
+    return "red is a great color"
+  } else if(color = 'green'){
+    return 'green is a solid favorite color'
+  } else if(color = 'black'){
+    return "so trendy"
+  } else{
+    return "you need to evaluate your favorite color choice"
+  }
+}
+let colorRating = faveColorFinder()
 
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -163,7 +204,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function printAllNames(){
+  for(let i = 0; i < names.length; i++){
+    console.log(names[i])
+  }
+}
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -174,8 +220,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function thatsOdd(num){
+  if(num % 2 === 0 ){
+  return "That's not odd"
+}  else {
+  return "That is odd indeed!"
+}
+}
 
-
+let oddChecker = thatsOdd()
 ////////////////// PROBLEM 14 ////////////////////
 
 /*
@@ -187,6 +240,7 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+const bestMovie = title => `${title} is the best movie ever!`
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -201,6 +255,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+
+
+function bigOrSmall(arr){
+  let answers = []
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > 100){
+      answers.push('big')
+    } else{
+      answers.push('small')
+    }
+  }
+  return answers
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
 
 
 ////////////////// PROBLEM 16 ////////////////////
@@ -224,6 +292,11 @@ let sampleString = "Hi, my name is Kylo."
 //CODE HERE
 
 
+function makeUppercase(str){
+  console.log(str.toUpperCase())
+}
+
+makeUppercase(sampleString)
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -233,7 +306,14 @@ let sampleString = "Hi, my name is Kylo."
   Check to make sure the email contains an '@' symbol.
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
-*/
+*/function emailCheck(email){
+  email = String(email).trim()
+  if(email.includes('@')){
+    return 'email verified'
+  } else{
+    return "must provide a valid email address"
+  }
+}
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
@@ -259,6 +339,22 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+function isArrayAscending(arr) {
+
+  for (let i = 0; i < arr.length; i++){
+  const currentValue = arr[i]
+  const nextValue = arr[i + 1]
+
+  if (currentValue > nextValue){
+    return false
+  }
+} 
+  return true
+}
+
+const arrayIsAscending = isArrayAscending(sampleArray)
+
+console.log({arrayIsAscending})
 
 
 ////////////////// PROBLEM 22 ////////////////////
