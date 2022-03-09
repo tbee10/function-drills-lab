@@ -50,7 +50,7 @@ console.log(dog['color'])
 //Code here
 const favoriteThings = {
   band: 'Led Zeppelin',
-  food: 'Mexican',
+  food: 'Italian',
   person: 'Amanda',
   book: 'A Song of Ice and Fire',
   movie: 'The Godfather',
@@ -122,7 +122,8 @@ function greeting( obj ) {
 
 //Code Here
 function totalPopulation(obj){
-  
+  const {Utah, California, Texas, Arizona} = obj
+  return Utah + California + Texas + Arizona
 }
 
 
@@ -137,7 +138,10 @@ function totalPopulation(obj){
 */
 
 //Code Here
-
+function ingredients(obj){
+  const {carbs, fat, protein} = obj
+  return [carbs, fat, protein]
+}
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
@@ -159,7 +163,8 @@ var user = {
 */
 
 //Code Here
-
+user.name = "Bryan G. Smith"
+user.email = "bryan.smith@devmounta.in"
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -167,7 +172,7 @@ var user = {
 */
 
 //Code Here
-
+delete user.age
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
@@ -177,9 +182,18 @@ var user = {
 */
 
 //Code here
+class Cat {
+  constructor(name, age, color) {
+    this.name = name
+    this.age = age
+    this.color = color
 
+  }
+}
 
+const jake = new Cat('Jake', 5, "black and brown")
 
+console.log(jake.name)
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
   Create a class called 'Wizard'. Make sure to call your constructor, and require these 3 parameters: name, age, favoriteSpell.
@@ -189,7 +203,20 @@ var user = {
 */
 
 //Code here
+class Wizard{
+  constructor(name, age, favoriteSpell){
+    this.name = name
+    this.age = age
+    this.favoriteSpell = favoriteSpell
+  }
+  castSpell(){
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+  }
+}
 
+const harry = new Wizard('Harry', 14, 'expecto patronum')
+
+harry.castSpell()
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
     Write a class called Phone. We'll use it as if we were creating
